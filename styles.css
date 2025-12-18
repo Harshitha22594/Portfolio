@@ -1,0 +1,53 @@
+body {
+  background-color: #050505;
+  color: #e2e8f0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  overflow-x: hidden;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) skewX(12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(12deg);
+  }
+}
+
+.animate-shine {
+  animation: shine 1.5s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+.selection\:bg-cyan-500\/30::selection {
+  background-color: rgba(6, 182, 212, 0.3);
+}
+
+.selection\:text-cyan-200::selection {
+  color: #a5f3fc;
+}
+
+/* Simple 3D tilt for cards */
+.tilt-card {
+  transition: transform 0.5s ease-out;
+  transform-style: preserve-3d;
+}
+
+.tilt-card-inner {
+  height: 100%;
+}
+
+
